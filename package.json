@@ -2,7 +2,7 @@
   "name": "react-odometerjs",
   "version": "1.0.0",
   "description": "Odometer.js as a React component",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/inferusvv/react-odometerjs.git"
