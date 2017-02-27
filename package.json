@@ -1,6 +1,6 @@
 {
-  "name": "react-odometerjs",
-  "version": "1.0.0",
+  "name": "react-odometer1js",
+  "version": "1.0.1",
   "description": "Odometer.js as a React component",
   "main": "./dist/index.js",
   "repository": {
