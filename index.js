@@ -1,8 +1,8 @@
-import React, { PropTypes } from 'react';
+import React, { PropTypes, Component } from 'react';
 import ReactDOM from 'react-dom';
 import Odometer from 'odometer';
 
-class ReactOdometer extends React.Component {
+export default class ReactOdometer extends Component {
   static propTypes = {
     value: PropTypes.number.isRequired,
     options: PropTypes.object,
@@ -24,5 +24,3 @@ class ReactOdometer extends React.Component {
     return React.createElement('div');
   }
 }
-
-export default ReactOdometer;
