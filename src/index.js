@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import Odometer from 'odometer';
 
 export default class ReactOdometer extends Component {
   static propTypes = {
@@ -10,6 +9,7 @@ export default class ReactOdometer extends Component {
   };
 
   componentDidMount() {
+    const Odometer = require('odometer');
     this.odometer = new Odometer({
       el: ReactDOM.findDOMNode(this),
       value: this.props.value,
