@@ -24,6 +24,7 @@
   "homepage": "https://github.com/inferusvv/react-odometerjs#readme",
   "dependencies": {
     "odometer": "^0.4.7",
+    "prop-types": "^15.5.10",
     "react": "^15.4.1",
     "react-dom": "^15.4.1"
   },
