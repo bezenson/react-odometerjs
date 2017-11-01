@@ -34,7 +34,7 @@
     "babel-preset-stage-0": "^6.22.0"
   },
   "scripts": {
-    "build": "babel ./src/index.js --out-dir ./dist",
+    "build": "babel src --out-dir dist",
     "prepublish": "npm run build"
   }
 }
