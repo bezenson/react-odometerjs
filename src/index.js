@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import Odometer from 'odometer';
 
 export default class ReactOdometer extends Component {
+  static defaultProps = {
+    options: {},
+  };
+
   static propTypes = {
     value: PropTypes.number.isRequired,
     options: PropTypes.object,
   };
 
   componentDidMount() {
+    const { value, options } = this.props;
     this.odometer = new Odometer({
-      el: ReactDOM.findDOMNode(this),
-      value: this.props.value,
-      ...this.props.options,
+      el: this.node,
+      value,
+      ...options,
     });
   }
 
@@ -22,6 +26,10 @@ export default class ReactOdometer extends Component {
   }
 
   render() {
-    return React.createElement('div');
+    return React.createElement('div', {
+      ref: (node) => {
+        this.node = node;
+      },
+    });
   }
 }
