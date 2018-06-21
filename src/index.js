@@ -5,6 +5,10 @@ import Odometer from 'odometer';
 export default class ReactOdometer extends PureComponent {
   // Information about options can be found here:
   // http://github.hubspot.com/odometer/
+  constructor(props) {
+  super(props);
+  this.node = React.createRef;
+}
   static propTypes = {
     animation: PropTypes.bool,
     auto: PropTypes.bool,
@@ -29,10 +33,6 @@ export default class ReactOdometer extends PureComponent {
   }
 
   render() {
-    return React.createElement('div', {
-      ref: (node) => {
-        this.node = node;
-      },
-    });
+    return <div ref={node}/>
   }
 }
