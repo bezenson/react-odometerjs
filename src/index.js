@@ -25,7 +25,8 @@ export default class ReactOdometer extends PureComponent {
   }
 
   componentDidUpdate() {
-    this.odometer.update(this.props.value);
+    const { value } = this.props;
+    this.odometer.update(value);
   }
 
   render() {
