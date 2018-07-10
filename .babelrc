@@ -2,5 +2,10 @@
   "presets": [
     "env",
     "stage-0"
+  ],
+  "plugins": [
+    ["transform-react-remove-prop-types", {
+      "removeImport": true
+    }]
   ]
 }
