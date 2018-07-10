@@ -1,6 +1,6 @@
 {
   "name": "react-odometerjs",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Odometer.js as a React component",
   "main": "./dist/index.js",
   "repository": {
@@ -23,9 +23,11 @@
   },
   "homepage": "https://github.com/inferusvv/react-odometerjs#readme",
   "dependencies": {
-    "odometer": "^0.4.8",
-    "prop-types": "^15.6.0",
-    "react": "^16.0.0"
+    "odometer": "^0.4.8"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
@@ -37,7 +39,8 @@
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.0",
-    "eslint-plugin-react": "^7.10.0"
+    "eslint-plugin-react": "^7.10.0",
+    "prop-types": "^15.6.2"
   },
   "scripts": {
     "build": "babel src --out-dir dist",

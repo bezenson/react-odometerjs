@@ -15,10 +15,16 @@ export default class ReactOdometer extends PureComponent {
     value: PropTypes.number.isRequired,
   };
 
+  constructor(props) {
+    super(props);
+
+    this.node = React.createRef();
+  }
+
   componentDidMount() {
     const { value, ...options } = this.props;
     this.odometer = new Odometer({
-      el: this.node,
+      el: this.node.current,
       value,
       ...options,
     });
@@ -31,9 +37,7 @@ export default class ReactOdometer extends PureComponent {
 
   render() {
     return React.createElement('div', {
-      ref: (node) => {
-        this.node = node;
-      },
+      ref: this.node,
     });
   }
 }
