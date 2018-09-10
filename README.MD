@@ -45,7 +45,8 @@ Example snippet:
 import dynamic from 'next/dynamic'
 
 const Odometer = dynamic(import('react-odometerjs'), {
-    ssr: false
+    ssr: false,
+    loading: () => 0
 });
 
 ...
