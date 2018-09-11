@@ -1,56 +1,55 @@
 # React Odometer.js
 
-Simple react component for using [Odometer.js](https://github.com/HubSpot/odometer) in your React
-application.
+Simple React wrapper around [Odometer.js](https://github.com/HubSpot/odometer).
 
 ## How to use it
 
 1. Installation
 
-    ```bash
-    npm install --save react-odometerjs
-    ```
+```bash
+npm install --save react-odometerjs
+```
 
-    or
-    ```bash
-    yarn add react-odometerjs
-    ```
+or
+
+```bash
+yarn add react-odometerjs
+```
 
 2. Include component in your application:
 
-    ```javascript
-    import Odometer from 'react-odometerjs';
-    // ...
-    return <Odometer value={1234} format="(.ddd),dd" />;
-    ```
+```javascript
+import Odometer from 'react-odometerjs';
+// ...
+return <Odometer value={1234} format="(.ddd),dd" />;
+```
 
 > Don't forget to include styles on your page. Official themes can be found
-> [here](http://github.hubspot.com/odometer/api/themes/)
+> [here](http://github.hubspot.com/odometer/api/themes/).
 
 ## Options
 
-You can pass odometer __options via props__.<br/>
-See [official documentation](http://github.hubspot.com/odometer/) of Odometer.js
-to learn about available options.
+You can pass odometer __options via props__. See
+[official documentation](http://github.hubspot.com/odometer/) of Odometer.js to learn about
+available options.
 
 ## [Next.js](https://github.com/zeit/next.js/) integration
 
-Because [Odometer.js](https://github.com/HubSpot/odometer) required `document` object,
-we should load library in [dynamic import](https://github.com/zeit/next.js/#dynamic-import),
-to not load library on server-side.
+Because Odometer.js requires `document` object, we should load library using
+[dynamic import](https://github.com/zeit/next.js/#dynamic-import), to avoid loading library on
+server-side.
 
 Example snippet:
 
-```jsx
+```javascript
 import dynamic from 'next/dynamic'
 
 const Odometer = dynamic(import('react-odometerjs'), {
     ssr: false,
     loading: () => 0
 });
-
-...
-<Odometer value={ this.props.value } format="(d,d)"/>
+// ...
+return <Odometer value={1234} format="(.ddd),dd" />;
 ```
 
 ## Issues
