@@ -52,6 +52,25 @@ const Odometer = dynamic(import('react-odometerjs'), {
 return <Odometer value={1234} format="(.ddd),dd" />;
 ```
 
+## Gatsby
+
+`Odometer.js`
+```js
+import Odometer from 'react-odometerjs'
+export default Odometer
+```
+
+`App.js`
+```js
+import loadable from '@loadable/component'
+
+const Odometer = loadable(() => import('./Odometer'))
+
+...
+
+<Odometer value={1234} />
+```
+
 ## Issues
 
 Found an issue? You are welcome [here](https://github.com/inferusvv/react-odometerjs/issues).
