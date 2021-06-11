@@ -1,6 +1,6 @@
 {
   "name": "react-odometerjs",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Odometer.js as a React component",
   "main": "./dist/index.js",
   "repository": {
@@ -26,8 +26,8 @@
     "odometer": "^0.4.8"
   },
   "peerDependencies": {
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0"
+    "react": ">= 16.3.0",
+    "react-dom": ">= 16.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
