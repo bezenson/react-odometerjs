@@ -26,8 +26,8 @@
     "odometer": "^0.4.8"
   },
   "peerDependencies": {
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0"
+    "react": ">= 16.3.0",
+    "react-dom": ">= 16.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
