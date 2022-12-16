@@ -1,6 +1,6 @@
 {
   "name": "react-odometerjs",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "description": "Odometer.js as a React component",
   "main": "./dist/index.js",
   "repository": {
@@ -26,25 +26,24 @@
     "odometer": "^0.4.8"
   },
   "peerDependencies": {
-    "react": ">= 16.3.0",
-    "react-dom": ">= 16.3.0"
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.23.0",
-    "babel-eslint": "^9.0.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.15",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.22.0",
-    "eslint": "^5.5.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
-    "prop-types": "^15.6.2"
+    "@types/react": "^18.0.26",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.46.1",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "latest",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "latest",
+    "typescript": "*"
   },
   "scripts": {
-    "build": "babel src --out-dir dist",
+    "build": "tsc",
     "lint-js": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
     "prepublish": "npm run build"
-  }
+  },
+  "packageManager": "yarn@3.3.0"
 }
