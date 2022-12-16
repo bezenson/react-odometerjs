@@ -1,9 +1,9 @@
-import { createElement, useEffect, useRef, type FC } from 'react';
+import { createElement, type HTMLProps, useEffect, useRef, type FC } from 'react';
 import Odometer from 'odometer';
 
-export interface ReactOdometerProps {
+export interface ReactOdometerProps extends HTMLProps<HTMLDivElement> {
   /**
-   * Count is a simpler animation method which just increments the value,  use it when you're looking for something more
+   * Count is a simpler animation method which just increments the value, use it when you're looking for something more
    * subtle.
    */
   animation?: 'count';
@@ -22,10 +22,6 @@ export interface ReactOdometerProps {
    */
   format?: string;
   /**
-   * Change the selector used to automatically find things to be animated
-   */
-  selector?: string;
-  /**
    * Specify the theme (if you have more than one theme css file on the page).
    * Will add CSS class .odometer-theme-{prop value} to wrapper `div`.
    */
@@ -36,7 +32,7 @@ export interface ReactOdometerProps {
   value: number;
 }
 
-const ReactOdometer: FC<ReactOdometerProps> = ({ value, ...options }) => {
+const ReactOdometer: FC<ReactOdometerProps> = ({ animation, duration, format, theme, value, ...rest }) => {
   const node = useRef<HTMLDivElement>(null);
   const odometer = useRef<Odometer>();
 
@@ -44,8 +40,11 @@ const ReactOdometer: FC<ReactOdometerProps> = ({ value, ...options }) => {
     odometer.current = new Odometer({
       el: node.current,
       auto: false,
+      animation,
+      duration,
+      format,
+      theme,
       value,
-      ...options,
     });
   }, []);
 
@@ -54,6 +53,7 @@ const ReactOdometer: FC<ReactOdometerProps> = ({ value, ...options }) => {
   }, [value]);
 
   return createElement('div', {
+    ...rest,
     ref: node,
   });
 };
