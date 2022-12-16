@@ -1,5 +1,5 @@
-![Latest version](https://img.shields.io/npm/v/react-odometerjs)
-![Downloads](https://img.shields.io/npm/dm/react-odometerjs)
+[![Latest version](https://img.shields.io/npm/v/react-odometerjs)](https://www.npmjs.com/package/react-odometerjs)
+[![Downloads](https://img.shields.io/npm/dm/react-odometerjs)](https://www.npmjs.com/package/react-odometerjs)
 
 # React Odometer.js
 
