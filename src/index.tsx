@@ -37,18 +37,20 @@ export interface ReactOdometerProps {
 }
 
 const ReactOdometer: FC<ReactOdometerProps> = ({ value, ...options }) => {
-  const node = useRef();
-  const odometer = useRef(
-    new Odometer({
+  const node = useRef<HTMLDivElement>(null);
+  const odometer = useRef<Odometer>();
+
+  useEffect(() => {
+    odometer.current = new Odometer({
       el: node.current,
       auto: false,
       value,
       ...options,
-    }),
-  );
+    });
+  }, []);
 
   useEffect(() => {
-    odometer.current.update(value);
+    odometer.current?.update(value);
   }, [value]);
 
   return createElement('div', {

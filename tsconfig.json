@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "commonjs",
+    "target": "ESNext",
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src", "odometer.d.ts"],
+  "include": ["src/", "odometer.d.ts"],
   "exclude": ["node_modules"],
 }

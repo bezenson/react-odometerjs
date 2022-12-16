@@ -1,8 +1,14 @@
 {
   "name": "react-odometerjs",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Odometer.js as a React component",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/",
+    "LICENSE.MD",
+    "README.MD"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/inferusvv/react-odometerjs.git"
@@ -11,10 +17,12 @@
     "react",
     "component",
     "odometer",
+    "hubspot",
     "js",
     "react-component",
     "javascript",
-    "hubspot"
+    "typescript",
+    "counter"
   ],
   "author": "Vladislav Bezenson",
   "license": "MIT",
@@ -35,14 +43,15 @@
     "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "latest",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "latest",
     "typescript": "*"
   },
   "scripts": {
-    "build": "tsc",
-    "lint-js": "eslint --ignore-path .gitignore --ignore-pattern \"!**/.*\" .",
+    "build": "rm -rf dist/ && tsc",
+    "lint": "eslint .",
     "prepublish": "npm run build"
   },
   "packageManager": "yarn@3.3.0"

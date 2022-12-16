@@ -29,4 +29,9 @@ module.exports = {
     }],
     '@typescript-eslint/semi': ['error', 'always'],
   },
+  settings: {
+    react: {
+      version: '16.8.0',
+    },
+  },
 };
