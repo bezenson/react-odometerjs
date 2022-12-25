@@ -5,6 +5,8 @@
 
 Simple React wrapper around [Odometer.js](https://github.com/HubSpot/odometer).
 
+![Preview](preview.gif)
+
   - [How to use this library](#how-to-use-this-library)
   - [Options](#options)
   - [Next.js integration](#nextjs-integration)
