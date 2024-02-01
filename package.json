@@ -1,6 +1,6 @@
 {
   "name": "react-odometerjs",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Odometer.js as a React component",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/inferusvv/react-odometerjs.git"
+    "url": "git+https://github.com/bezenson/react-odometerjs.git"
   },
   "keywords": [
     "react",
@@ -27,9 +27,9 @@
   "author": "Vladislav Bezenson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/inferusvv/react-odometerjs/issues"
+    "url": "https://github.com/bezenson/react-odometerjs/issues"
   },
-  "homepage": "https://github.com/inferusvv/react-odometerjs#readme",
+  "homepage": "https://github.com/bezenson/react-odometerjs#readme",
   "dependencies": {
     "odometer": "^0.4.8"
   },

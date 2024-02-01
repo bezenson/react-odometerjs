@@ -118,4 +118,4 @@ const App = () => {
 
 ## Issues
 
-Found an issue? You are welcome [here](https://github.com/inferusvv/react-odometerjs/issues).
+Found an issue? You are welcome [here](https://github.com/bezenson/react-odometerjs/issues).
