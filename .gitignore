@@ -1,5 +1,13 @@
 node_modules/
 npm-debug.log
 dist
-.yarn/
 .DS_Store
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
