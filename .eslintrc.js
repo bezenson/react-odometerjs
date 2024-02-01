@@ -1,19 +1,13 @@
+/* eslint-env node */
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: ['plugin:react/recommended', 'standard-with-typescript'],
-  overrides: [],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    project: ['./tsconfig.json'],
-    sourceType: 'module',
-  },
-  plugins: ['react'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', "plugin:react/recommended"],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'react'],
+  root: true,
   rules: {
     'comma-dangle': 0,
     'no-irregular-whitespace': ['error', { skipComments: true }],
+    'no-console': ['error', { allow: ['warn', 'error'] }],
     semi: 0,
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/member-delimiter-style': ['error', {
@@ -31,7 +25,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: '16.8.0',
+      version: 'detect',
     },
   },
 };

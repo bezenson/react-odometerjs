@@ -1,6 +1,6 @@
 {
   "name": "react-odometerjs",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "description": "Odometer.js as a React component",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -38,16 +38,15 @@
     "react-dom": ">= 16.8.0"
   },
   "devDependencies": {
+    "@types/eslint": "^8",
     "@types/react": "^18.0.26",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.46.1",
-    "eslint": "^8.0.1",
-    "eslint-config-standard-with-typescript": "latest",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-react": "latest",
-    "typescript": "*"
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "typescript": "^5.3.3"
   },
   "scripts": {
     "build": "rm -rf dist/ && tsc",

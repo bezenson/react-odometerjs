@@ -34,7 +34,7 @@ export interface ReactOdometerProps extends HTMLProps<HTMLDivElement> {
 
 const ReactOdometer: FC<ReactOdometerProps> = ({ animation, duration, format, theme, value, ...rest }) => {
   const node = useRef<HTMLDivElement>(null);
-  const odometer = useRef<Odometer>();
+   const odometer = useRef<Odometer>();
 
   useEffect(() => {
     odometer.current = new Odometer({
